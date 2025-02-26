@@ -9,18 +9,16 @@ function calculateRentalCost(days) {
   const longPeriodDiscount = 50;
   const shortTerm = 3;
   const shortPeriodDiscount = 20;
-  
+
   let result = rentalDayCost * days;
 
   if (days >= longTerm) {
     result -= longPeriodDiscount;
-    return result;
-  };
+  }
 
   if (days >= shortTerm) {
     result -= shortPeriodDiscount;
-    return result;
-  };
+  }
 
   return result;
 }
